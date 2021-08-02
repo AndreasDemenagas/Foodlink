@@ -1,4 +1,4 @@
-### Foodlink
+## Foodlink
 
 An iOS application for listing and viewing meal options. Supports searching, saving and looking through meals. 
 
