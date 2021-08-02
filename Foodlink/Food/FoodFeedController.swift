@@ -9,6 +9,14 @@ import UIKit
 
 class FoodFeedController: UICollectionViewController {
     
+    static let categoriesHeaderElementKind = "categoriesHeaderElementKind"
+    
+    private var categories: [Category]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     init() {
         let layout = UICollectionViewCompositionalLayout.foodFeedLayout()
         super.init(collectionViewLayout: layout)
@@ -23,6 +31,21 @@ class FoodFeedController: UICollectionViewController {
         
         collectionView.backgroundColor = .white
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid")
+        collectionView.register(FoodFeedHeaderCell.self, forSupplementaryViewOfKind: FoodFeedController.categoriesHeaderElementKind, withReuseIdentifier: FoodFeedHeaderCell.id)
+        
+        fetchFoodData()
+    }
+    
+    fileprivate func fetchFoodData() {
+        let urlString = "https://www.themealdb.com/api/json/v1/1/categories.php"
+        NetworkManager.shared.fetchCategories(urlString: urlString) { result in
+            switch result {
+            case .failure(let error):
+                print("Error fetching categories \(error)")
+            case .success(let response):
+                self.categories = response.categories
+            }
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -31,8 +54,18 @@ class FoodFeedController: UICollectionViewController {
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: FoodFeedHeaderCell.id, for: indexPath) as! FoodFeedHeaderCell
+        header.title = "Categories"
+        return header
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return section == 0 ? 3 : 8
+        if section == 0 {
+            return 4
+        }
+        
+        return categories?.count ?? 8
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

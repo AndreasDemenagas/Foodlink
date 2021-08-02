@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F524358426B6CE480072A62A /* FoodFeedHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F524358326B6CE480072A62A /* FoodFeedHeaderCell.swift */; };
+		F52E042526B85F4B00D96258 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042426B85F4B00D96258 /* NetworkManager.swift */; };
+		F52E042826B8607C00D96258 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042726B8607C00D96258 /* Category.swift */; };
+		F5CB713826B6F6A20037C4ED /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB713726B6F6A20037C4ED /* ReusableView.swift */; };
 		F5E39D7326B6C17C002B3302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7226B6C17C002B3302 /* AppDelegate.swift */; };
 		F5E39D7526B6C17C002B3302 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7426B6C17C002B3302 /* SceneDelegate.swift */; };
 		F5E39D7D26B6C17C002B3302 /* Foodlink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7B26B6C17C002B3302 /* Foodlink.xcdatamodeld */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F524358326B6CE480072A62A /* FoodFeedHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFeedHeaderCell.swift; sourceTree = "<group>"; };
+		F52E042426B85F4B00D96258 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = "../../../../../OneDrive - University of Southampton/Southampton/NetworkManager.swift"; sourceTree = "<group>"; };
+		F52E042726B8607C00D96258 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		F5CB713726B6F6A20037C4ED /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		F5E39D6F26B6C17C002B3302 /* Foodlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E39D7226B6C17C002B3302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5E39D7426B6C17C002B3302 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +49,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F52E042326B85F3500D96258 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F52E042426B85F4B00D96258 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F52E042626B8606A00D96258 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F52E042726B8607C00D96258 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5CB713626B6F6900037C4ED /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F5CB713726B6F6A20037C4ED /* ReusableView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		F5E39D6626B6C17C002B3302 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +98,9 @@
 				F5E39D9026B6C468002B3302 /* Food */,
 				F5E39D9126B6C46D002B3302 /* Drinks */,
 				F5E39D9226B6C472002B3302 /* Cart */,
+				F52E042626B8606A00D96258 /* Model */,
+				F52E042326B85F3500D96258 /* Networking */,
+				F5CB713626B6F6900037C4ED /* Protocols */,
 				F5E39D7E26B6C17D002B3302 /* Assets.xcassets */,
 				F5E39D8026B6C17D002B3302 /* LaunchScreen.storyboard */,
 				F5E39D8326B6C17D002B3302 /* Info.plist */,
@@ -79,6 +114,7 @@
 			children = (
 				F5E39D9326B6C4A5002B3302 /* FoodFeedController.swift */,
 				F5E39D9626B6C955002B3302 /* FoodFeedLayout.swift */,
+				F524358326B6CE480072A62A /* FoodFeedHeaderCell.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -166,8 +202,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52E042526B85F4B00D96258 /* NetworkManager.swift in Sources */,
+				F52E042826B8607C00D96258 /* Category.swift in Sources */,
+				F524358426B6CE480072A62A /* FoodFeedHeaderCell.swift in Sources */,
 				F5E39D7326B6C17C002B3302 /* AppDelegate.swift in Sources */,
 				F5E39D9726B6C955002B3302 /* FoodFeedLayout.swift in Sources */,
+				F5CB713826B6F6A20037C4ED /* ReusableView.swift in Sources */,
 				F5E39D9426B6C4A5002B3302 /* FoodFeedController.swift in Sources */,
 				F5E39D7526B6C17C002B3302 /* SceneDelegate.swift in Sources */,
 				F5E39D8C26B6C1BF002B3302 /* MainTabBarController.swift in Sources */,

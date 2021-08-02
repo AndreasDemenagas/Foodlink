@@ -33,7 +33,7 @@ extension UICollectionViewCompositionalLayout {
             section.contentInsets.leading = 16
             
             section.boundarySupplementaryItems = [
-                .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "categoryheaderid", alignment: .topLeading)
+                .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: FoodFeedController.categoriesHeaderElementKind, alignment: .topLeading)
             ]
             
             return section
