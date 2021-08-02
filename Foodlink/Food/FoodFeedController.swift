@@ -29,16 +29,16 @@ class FoodFeedController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.backgroundColor = .white
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid")
+        collectionView.backgroundColor = UIColor(white: 1, alpha: 0.95)
+        collectionView.register(FoodShowcaseCell.self, forCellWithReuseIdentifier: FoodShowcaseCell.id)
+        collectionView.register(FoodCategoryCell.self, forCellWithReuseIdentifier: FoodCategoryCell.id)
         collectionView.register(FoodFeedHeaderCell.self, forSupplementaryViewOfKind: FoodFeedController.categoriesHeaderElementKind, withReuseIdentifier: FoodFeedHeaderCell.id)
         
         fetchFoodData()
     }
     
     fileprivate func fetchFoodData() {
-        let urlString = "https://www.themealdb.com/api/json/v1/1/categories.php"
-        NetworkManager.shared.fetchCategories(urlString: urlString) { result in
+        NetworkManager.shared.fetchCategories() { result in
             switch result {
             case .failure(let error):
                 print("Error fetching categories \(error)")
@@ -49,8 +49,14 @@ class FoodFeedController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath)
-        cell.backgroundColor = .systemRed
+        
+        if indexPath.section == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodShowcaseCell.id, for: indexPath) as! FoodShowcaseCell
+            return cell
+        }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCategoryCell.id, for: indexPath) as! FoodCategoryCell
+        cell.category = categories?[indexPath.item]
         return cell
     }
     

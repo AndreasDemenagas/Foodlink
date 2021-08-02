@@ -23,7 +23,7 @@ extension UICollectionViewCompositionalLayout {
                 return section
             }
             
-            let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.25), heightDimension: .absolute(150)))
+            let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.25), heightDimension: .absolute(120)))
             item.contentInsets.trailing = 16
             item.contentInsets.bottom = 16
             

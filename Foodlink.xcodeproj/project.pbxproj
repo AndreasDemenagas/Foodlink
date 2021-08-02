@@ -13,6 +13,9 @@
 		F52E042B26B8657700D96258 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042A26B8657700D96258 /* Data+.swift */; };
 		F52E042D26B8658F00D96258 /* UIImage+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042C26B8658F00D96258 /* UIImage+Cache.swift */; };
 		F52E042F26B866FC00D96258 /* Extension_LayoutAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042E26B866FC00D96258 /* Extension_LayoutAnchors.swift */; };
+		F52E043126B8672300D96258 /* FoodCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E043026B8672300D96258 /* FoodCategoryCell.swift */; };
+		F52E043326B86A1000D96258 /* FoodShowcaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E043226B86A1000D96258 /* FoodShowcaseCell.swift */; };
+		F52E043526B86B1500D96258 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E043426B86B1500D96258 /* Meal.swift */; };
 		F5CB713826B6F6A20037C4ED /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB713726B6F6A20037C4ED /* ReusableView.swift */; };
 		F5E39D7326B6C17C002B3302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7226B6C17C002B3302 /* AppDelegate.swift */; };
 		F5E39D7526B6C17C002B3302 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7426B6C17C002B3302 /* SceneDelegate.swift */; };
@@ -31,6 +34,9 @@
 		F52E042A26B8657700D96258 /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
 		F52E042C26B8658F00D96258 /* UIImage+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Cache.swift"; sourceTree = "<group>"; };
 		F52E042E26B866FC00D96258 /* Extension_LayoutAnchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension_LayoutAnchors.swift; sourceTree = "<group>"; };
+		F52E043026B8672300D96258 /* FoodCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryCell.swift; sourceTree = "<group>"; };
+		F52E043226B86A1000D96258 /* FoodShowcaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodShowcaseCell.swift; sourceTree = "<group>"; };
+		F52E043426B86B1500D96258 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		F5CB713726B6F6A20037C4ED /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		F5E39D6F26B6C17C002B3302 /* Foodlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E39D7226B6C17C002B3302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				F52E042726B8607C00D96258 /* Category.swift */,
+				F52E043426B86B1500D96258 /* Meal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,6 +139,8 @@
 				F5E39D9326B6C4A5002B3302 /* FoodFeedController.swift */,
 				F5E39D9626B6C955002B3302 /* FoodFeedLayout.swift */,
 				F524358326B6CE480072A62A /* FoodFeedHeaderCell.swift */,
+				F52E043026B8672300D96258 /* FoodCategoryCell.swift */,
+				F52E043226B86A1000D96258 /* FoodShowcaseCell.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -221,9 +230,12 @@
 			files = (
 				F52E042526B85F4B00D96258 /* NetworkManager.swift in Sources */,
 				F52E042826B8607C00D96258 /* Category.swift in Sources */,
+				F52E043326B86A1000D96258 /* FoodShowcaseCell.swift in Sources */,
 				F52E042F26B866FC00D96258 /* Extension_LayoutAnchors.swift in Sources */,
+				F52E043526B86B1500D96258 /* Meal.swift in Sources */,
 				F52E042D26B8658F00D96258 /* UIImage+Cache.swift in Sources */,
 				F524358426B6CE480072A62A /* FoodFeedHeaderCell.swift in Sources */,
+				F52E043126B8672300D96258 /* FoodCategoryCell.swift in Sources */,
 				F5E39D7326B6C17C002B3302 /* AppDelegate.swift in Sources */,
 				F5E39D9726B6C955002B3302 /* FoodFeedLayout.swift in Sources */,
 				F5CB713826B6F6A20037C4ED /* ReusableView.swift in Sources */,
