@@ -10,6 +10,9 @@
 		F524358426B6CE480072A62A /* FoodFeedHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F524358326B6CE480072A62A /* FoodFeedHeaderCell.swift */; };
 		F52E042526B85F4B00D96258 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042426B85F4B00D96258 /* NetworkManager.swift */; };
 		F52E042826B8607C00D96258 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042726B8607C00D96258 /* Category.swift */; };
+		F52E042B26B8657700D96258 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042A26B8657700D96258 /* Data+.swift */; };
+		F52E042D26B8658F00D96258 /* UIImage+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042C26B8658F00D96258 /* UIImage+Cache.swift */; };
+		F52E042F26B866FC00D96258 /* Extension_LayoutAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042E26B866FC00D96258 /* Extension_LayoutAnchors.swift */; };
 		F5CB713826B6F6A20037C4ED /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB713726B6F6A20037C4ED /* ReusableView.swift */; };
 		F5E39D7326B6C17C002B3302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7226B6C17C002B3302 /* AppDelegate.swift */; };
 		F5E39D7526B6C17C002B3302 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7426B6C17C002B3302 /* SceneDelegate.swift */; };
@@ -25,6 +28,9 @@
 		F524358326B6CE480072A62A /* FoodFeedHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFeedHeaderCell.swift; sourceTree = "<group>"; };
 		F52E042426B85F4B00D96258 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = "../../../../../OneDrive - University of Southampton/Southampton/NetworkManager.swift"; sourceTree = "<group>"; };
 		F52E042726B8607C00D96258 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		F52E042A26B8657700D96258 /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
+		F52E042C26B8658F00D96258 /* UIImage+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Cache.swift"; sourceTree = "<group>"; };
+		F52E042E26B866FC00D96258 /* Extension_LayoutAnchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension_LayoutAnchors.swift; sourceTree = "<group>"; };
 		F5CB713726B6F6A20037C4ED /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		F5E39D6F26B6C17C002B3302 /* Foodlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E39D7226B6C17C002B3302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +71,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F52E042926B8656700D96258 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F52E042E26B866FC00D96258 /* Extension_LayoutAnchors.swift */,
+				F52E042A26B8657700D96258 /* Data+.swift */,
+				F52E042C26B8658F00D96258 /* UIImage+Cache.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F5CB713626B6F6900037C4ED /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +117,7 @@
 				F52E042626B8606A00D96258 /* Model */,
 				F52E042326B85F3500D96258 /* Networking */,
 				F5CB713626B6F6900037C4ED /* Protocols */,
+				F52E042926B8656700D96258 /* Extensions */,
 				F5E39D7E26B6C17D002B3302 /* Assets.xcassets */,
 				F5E39D8026B6C17D002B3302 /* LaunchScreen.storyboard */,
 				F5E39D8326B6C17D002B3302 /* Info.plist */,
@@ -204,6 +221,8 @@
 			files = (
 				F52E042526B85F4B00D96258 /* NetworkManager.swift in Sources */,
 				F52E042826B8607C00D96258 /* Category.swift in Sources */,
+				F52E042F26B866FC00D96258 /* Extension_LayoutAnchors.swift in Sources */,
+				F52E042D26B8658F00D96258 /* UIImage+Cache.swift in Sources */,
 				F524358426B6CE480072A62A /* FoodFeedHeaderCell.swift in Sources */,
 				F5E39D7326B6C17C002B3302 /* AppDelegate.swift in Sources */,
 				F5E39D9726B6C955002B3302 /* FoodFeedLayout.swift in Sources */,
@@ -211,6 +230,7 @@
 				F5E39D9426B6C4A5002B3302 /* FoodFeedController.swift in Sources */,
 				F5E39D7526B6C17C002B3302 /* SceneDelegate.swift in Sources */,
 				F5E39D8C26B6C1BF002B3302 /* MainTabBarController.swift in Sources */,
+				F52E042B26B8657700D96258 /* Data+.swift in Sources */,
 				F5E39D7D26B6C17C002B3302 /* Foodlink.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
