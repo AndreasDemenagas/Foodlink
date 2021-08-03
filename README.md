@@ -7,6 +7,8 @@ An iOS application for listing and viewing meal options. Supports searching, sav
 #### Features & Technologies: 
 * UIKit 
 * CollectionView CompositionalLayout APIs
+* DiffableDataSource & CollectionViewListConfiguration APIs
+* ViewModel Integration (MVVM)
 * Networking with API calls
 * Caching Images 
 * Programmatic UI
