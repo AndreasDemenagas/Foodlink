@@ -23,6 +23,7 @@ class FoodCategoryCell: UICollectionViewCell, ReuseableCell {
     private let label: UILabel = {
         let lbl = UILabel()
         lbl.font = UIFontMetrics.default.scaledFont(for: .boldSystemFont(ofSize: 14))
+        lbl.textColor = .label
         lbl.textAlignment = .center
         lbl.adjustsFontSizeToFitWidth = true
         return lbl

@@ -18,6 +18,7 @@ class FoodFeedHeaderCell: UICollectionReusableView, ReuseableCell {
     private let label: UILabel = {
         let lbl = UILabel()
         lbl.font = UIFontMetrics.default.scaledFont(for: .boldSystemFont(ofSize: 18))
+        lbl.textColor = .label
         return lbl
     }()
     
