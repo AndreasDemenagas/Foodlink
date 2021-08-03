@@ -41,6 +41,12 @@ class FoodCategoryMealCell: UICollectionViewCell, ReuseableCell {
         }
     }
     
+//    override var isHighlighted: Bool {
+//        didSet {
+//            backgroundColor = isHighlighted ? .white : .none
+//        }
+//    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         

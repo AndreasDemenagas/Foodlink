@@ -38,8 +38,8 @@ class FoodCategoryController: UICollectionViewController {
         
         setupDataSource()
         
-        viewModel.fetchMeals(for: category?.name) {
-            self.createSnapshot(with: self.viewModel.meals)
+        viewModel.fetchMeals(for: category?.name) { [weak self] in
+            self?.createSnapshot(with: self?.viewModel.meals ?? [])
         }
     }
     
@@ -56,6 +56,13 @@ class FoodCategoryController: UICollectionViewController {
             cell.meal = meal
             return cell
         })
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedMeal = snapshot.itemIdentifiers[indexPath.item]
+        let mealDetailsController = FoodDetailsController()
+        mealDetailsController.meal = selectedMeal
+        navigationController?.pushViewController(mealDetailsController, animated: true)
     }
     
 }

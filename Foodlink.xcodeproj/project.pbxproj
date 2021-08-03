@@ -23,6 +23,8 @@
 		F58B808E26B95B8D005A85CD /* FoodCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B808D26B95B8D005A85CD /* FoodCategoryViewModel.swift */; };
 		F58B809026B9627C005A85CD /* FoodCategoryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B808F26B9627C005A85CD /* FoodCategoryLayout.swift */; };
 		F58B809226B97F2D005A85CD /* FoodCategoryMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809126B97F2D005A85CD /* FoodCategoryMealCell.swift */; };
+		F58B809526B99655005A85CD /* FoodDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809426B99655005A85CD /* FoodDetailsController.swift */; };
+		F58B809726B99661005A85CD /* FoodDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809626B99661005A85CD /* FoodDetailsViewModel.swift */; };
 		F5CB713826B6F6A20037C4ED /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB713726B6F6A20037C4ED /* ReusableView.swift */; };
 		F5E39D7326B6C17C002B3302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7226B6C17C002B3302 /* AppDelegate.swift */; };
 		F5E39D7526B6C17C002B3302 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7426B6C17C002B3302 /* SceneDelegate.swift */; };
@@ -52,6 +54,8 @@
 		F58B808D26B95B8D005A85CD /* FoodCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryViewModel.swift; sourceTree = "<group>"; };
 		F58B808F26B9627C005A85CD /* FoodCategoryLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryLayout.swift; sourceTree = "<group>"; };
 		F58B809126B97F2D005A85CD /* FoodCategoryMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryMealCell.swift; sourceTree = "<group>"; };
+		F58B809426B99655005A85CD /* FoodDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsController.swift; sourceTree = "<group>"; };
+		F58B809626B99661005A85CD /* FoodDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewModel.swift; sourceTree = "<group>"; };
 		F5CB713726B6F6A20037C4ED /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		F5E39D6F26B6C17C002B3302 /* Foodlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E39D7226B6C17C002B3302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 			path = FoodCategory;
 			sourceTree = "<group>";
 		};
+		F58B809326B99647005A85CD /* FoodDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F58B809426B99655005A85CD /* FoodDetailsController.swift */,
+				F58B809626B99661005A85CD /* FoodDetailsViewModel.swift */,
+			);
+			path = FoodDetails;
+			sourceTree = "<group>";
+		};
 		F5CB713626B6F6900037C4ED /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +162,7 @@
 				F5E39D8B26B6C1BF002B3302 /* MainTabBarController.swift */,
 				F5E39D9026B6C468002B3302 /* FoodFeed */,
 				F58B808826B95576005A85CD /* FoodCategory */,
+				F58B809326B99647005A85CD /* FoodDetails */,
 				F5E39D9126B6C46D002B3302 /* Drinks */,
 				F5E39D9226B6C472002B3302 /* Cart */,
 				F52E042626B8606A00D96258 /* Model */,
@@ -259,8 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58B809526B99655005A85CD /* FoodDetailsController.swift in Sources */,
 				F52E042526B85F4B00D96258 /* NetworkManager.swift in Sources */,
 				F52E042826B8607C00D96258 /* Category.swift in Sources */,
+				F58B809726B99661005A85CD /* FoodDetailsViewModel.swift in Sources */,
 				F58B808A26B9558B005A85CD /* FoodCategoryController.swift in Sources */,
 				F52E043326B86A1000D96258 /* FoodShowcaseCell.swift in Sources */,
 				F58B808526B94F20005A85CD /* FoodFeedViewModel.swift in Sources */,
