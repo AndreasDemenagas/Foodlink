@@ -13,8 +13,8 @@ class FoodCategoryController: UICollectionViewController {
     
     private let viewModel = FoodCategoryViewModel()
     
-    var dataSource: UICollectionViewDiffableDataSource<Section, Meal>!
-    var snapshot: NSDiffableDataSourceSnapshot<Section, Meal>!
+    private var dataSource: UICollectionViewDiffableDataSource<Section, Meal>!
+    private var snapshot: NSDiffableDataSourceSnapshot<Section, Meal>!
     
     init() {
         let layout = UICollectionViewCompositionalLayout.categoryListLayout()
@@ -25,7 +25,7 @@ class FoodCategoryController: UICollectionViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    enum Section {
+    private enum Section {
         case main
     }
     
@@ -34,32 +34,28 @@ class FoodCategoryController: UICollectionViewController {
         
         title = category?.name
         collectionView.backgroundColor = .backgroundWhite
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "id")
+        collectionView.register(FoodCategoryMealCell.self, forCellWithReuseIdentifier: FoodCategoryMealCell.id)
+        
+        setupDataSource()
         
         viewModel.fetchMeals(for: category?.name) {
-            self.snapshot = NSDiffableDataSourceSnapshot<Section, Meal>()
-            self.snapshot.appendSections([.main])
-            self.snapshot.appendItems(self.viewModel.meals, toSection: .main)
-            self.dataSource.apply(self.snapshot, animatingDifferences: false)
+            self.createSnapshot(with: self.viewModel.meals)
         }
-        
-        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Meal> { (cell, indexPath, meal) in
-                    
-            // Define how data should be shown using content configuration
-            var content = cell.defaultContentConfiguration()
-            content.text = meal.name
-            
-            // Assign content configuration to cell
-            cell.contentConfiguration = content
-       }
-        
-       dataSource = UICollectionViewDiffableDataSource<Section, Meal>(collectionView: collectionView) {
-            (collectionView: UICollectionView, indexPath: IndexPath, identifier: Meal) -> UICollectionViewCell? in
-            // Dequeue reusable cell using cell registration (Reuse identifier no longer needed)
-            let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: identifier)
+    }
+    
+    fileprivate func createSnapshot(with: [Meal]) {
+        self.snapshot = NSDiffableDataSourceSnapshot<Section, Meal>()
+        self.snapshot.appendSections([.main])
+        self.snapshot.appendItems(self.viewModel.meals, toSection: .main)
+        self.dataSource.apply(self.snapshot, animatingDifferences: false)
+    }
+    
+    fileprivate func setupDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, Meal>(collectionView: collectionView, cellProvider: { collectionView, indexPath, meal in
+            let cell: FoodCategoryMealCell = collectionView.dequeueCell(for: indexPath)
+            cell.meal = meal
             return cell
-        }
-        
+        })
     }
     
 }

@@ -22,6 +22,7 @@
 		F58B808C26B95687005A85CD /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B808B26B95687005A85CD /* UIColor+.swift */; };
 		F58B808E26B95B8D005A85CD /* FoodCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B808D26B95B8D005A85CD /* FoodCategoryViewModel.swift */; };
 		F58B809026B9627C005A85CD /* FoodCategoryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B808F26B9627C005A85CD /* FoodCategoryLayout.swift */; };
+		F58B809226B97F2D005A85CD /* FoodCategoryMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809126B97F2D005A85CD /* FoodCategoryMealCell.swift */; };
 		F5CB713826B6F6A20037C4ED /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB713726B6F6A20037C4ED /* ReusableView.swift */; };
 		F5E39D7326B6C17C002B3302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7226B6C17C002B3302 /* AppDelegate.swift */; };
 		F5E39D7526B6C17C002B3302 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7426B6C17C002B3302 /* SceneDelegate.swift */; };
@@ -50,6 +51,7 @@
 		F58B808B26B95687005A85CD /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		F58B808D26B95B8D005A85CD /* FoodCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryViewModel.swift; sourceTree = "<group>"; };
 		F58B808F26B9627C005A85CD /* FoodCategoryLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryLayout.swift; sourceTree = "<group>"; };
+		F58B809126B97F2D005A85CD /* FoodCategoryMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryMealCell.swift; sourceTree = "<group>"; };
 		F5CB713726B6F6A20037C4ED /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		F5E39D6F26B6C17C002B3302 /* Foodlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E39D7226B6C17C002B3302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				F58B808926B9558B005A85CD /* FoodCategoryController.swift */,
 				F58B808D26B95B8D005A85CD /* FoodCategoryViewModel.swift */,
 				F58B808F26B9627C005A85CD /* FoodCategoryLayout.swift */,
+				F58B809126B97F2D005A85CD /* FoodCategoryMealCell.swift */,
 			);
 			path = FoodCategory;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				F52E042D26B8658F00D96258 /* UIImage+Cache.swift in Sources */,
 				F58B808C26B95687005A85CD /* UIColor+.swift in Sources */,
 				F524358426B6CE480072A62A /* FoodFeedHeaderCell.swift in Sources */,
+				F58B809226B97F2D005A85CD /* FoodCategoryMealCell.swift in Sources */,
 				F58B808E26B95B8D005A85CD /* FoodCategoryViewModel.swift in Sources */,
 				F52E043126B8672300D96258 /* FoodCategoryCell.swift in Sources */,
 				F5E39D7326B6C17C002B3302 /* AppDelegate.swift in Sources */,
