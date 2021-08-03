@@ -11,11 +11,7 @@ class FoodFeedController: UICollectionViewController {
     
     static let categoriesHeaderElementKind = "categoriesHeaderElementKind"
     
-    private var categories: [Category]? {
-        didSet {
-            collectionView.reloadData()
-        }
-    }
+    private var categories: [Category]?
     
     private var featuredMeals = [Meal]()
     
@@ -71,7 +67,6 @@ class FoodFeedController: UICollectionViewController {
             dispatchGroup.leave()
         }
         
-        
         for _ in 1...4 {
             dispatchGroup.enter()
             fetchFeaturesMeals {
@@ -88,6 +83,10 @@ class FoodFeedController: UICollectionViewController {
         
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodShowcaseCell.id, for: indexPath) as! FoodShowcaseCell
+            if featuredMeals.isEmpty {
+                return cell
+            }
+            cell.meal = featuredMeals[indexPath.item]
             return cell
         }
         
