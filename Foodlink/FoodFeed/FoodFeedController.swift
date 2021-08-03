@@ -80,7 +80,7 @@ class FoodFeedController: UICollectionViewController {
         }
         
         let category = viewModel.categories?[indexPath.item]
-        let categoryController = FoodCategoryController(collectionViewLayout: UICollectionViewFlowLayout())
+        let categoryController = FoodCategoryController()
         categoryController.category = category
         navigationController?.pushViewController(categoryController, animated: true)
     }

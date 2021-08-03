@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Meal: Decodable {
+struct Meal: Decodable, Hashable {
     let id: String
     let name: String
     let imageUrlString: String
