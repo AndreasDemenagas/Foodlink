@@ -11,9 +11,7 @@ class FoodShowcaseCell: UICollectionViewCell, ReuseableCell {
     
     var category: Category? {
         didSet {
-            guard let category = category else {
-                return
-            }
+            guard let category = category else { return }
             
             label.text = category.name
             imageView.loadImage(from: category.imageUrlString)
@@ -82,6 +80,10 @@ class FoodShowcaseCell: UICollectionViewCell, ReuseableCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
     }
     
     

@@ -17,6 +17,8 @@ class FoodFeedController: UICollectionViewController {
         }
     }
     
+    private var featuredMeals = [Meal]()
+    
     init() {
         let layout = UICollectionViewCompositionalLayout.foodFeedLayout()
         super.init(collectionViewLayout: layout)
@@ -37,14 +39,48 @@ class FoodFeedController: UICollectionViewController {
         fetchFoodData()
     }
     
-    fileprivate func fetchFoodData() {
+    fileprivate func fetchCategories(completion: @escaping () -> () ) {
         NetworkManager.shared.fetchCategories() { result in
             switch result {
             case .failure(let error):
                 print("Error fetching categories \(error)")
             case .success(let response):
                 self.categories = response.categories
+                completion()
             }
+        }
+    }
+    
+    fileprivate func fetchFeaturesMeals(completion: @escaping () -> ()) {
+        NetworkManager.shared.fetchRandomMeal { result in
+            switch result {
+            case .failure(let error):
+                print("Error fetching random meal: \(error)")
+            case .success(let response):
+                self.featuredMeals.append(response.meals[0])
+                completion()
+            }
+        }
+    }
+    
+    fileprivate func fetchFoodData() {
+        let dispatchGroup = DispatchGroup()
+        
+        dispatchGroup.enter()
+        fetchCategories {
+            dispatchGroup.leave()
+        }
+        
+        
+        for _ in 1...4 {
+            dispatchGroup.enter()
+            fetchFeaturesMeals {
+                dispatchGroup.leave()
+            }
+        }
+        
+        dispatchGroup.notify(queue: .main) {
+            self.collectionView.reloadData()
         }
     }
     
