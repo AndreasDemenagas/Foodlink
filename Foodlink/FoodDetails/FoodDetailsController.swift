@@ -32,6 +32,8 @@ class FoodDetailsController: UICollectionViewController {
     
     static let foodDetailsHeaderId = "foodDetailsHeaderId"
     
+    static let ingredientsHeaderId = "ingedientsHeaderId"
+    
     var mealId: String
 
     override func viewDidLoad() {
@@ -42,23 +44,43 @@ class FoodDetailsController: UICollectionViewController {
         
         collectionView.backgroundColor = .backgroundWhite
         collectionView.register(FoodDetailsMealInfoCell.self, forCellWithReuseIdentifier: FoodDetailsMealInfoCell.id)
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "id")
+        
         collectionView.register(FoodDetailsHeader.self, forSupplementaryViewOfKind: FoodDetailsController.foodDetailsHeaderId, withReuseIdentifier: FoodDetailsHeader.id)
+        collectionView.register(FoodFeedHeaderCell.self, forSupplementaryViewOfKind: FoodDetailsController.ingredientsHeaderId, withReuseIdentifier: FoodFeedHeaderCell.id)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: FoodDetailsMealInfoCell = collectionView.dequeueCell(for: indexPath)
-        cell.viewModel = viewModel
+        
+        if indexPath.section == 0 {
+            let cell: FoodDetailsMealInfoCell = collectionView.dequeueCell(for: indexPath)
+            cell.viewModel = viewModel
+            return cell
+        }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "id", for: indexPath)
+        cell.backgroundColor = .red
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header: FoodDetailsHeader = collectionView.dequeueCell(for: indexPath, headerFooter: true, kind: kind)
-        header.viewModel = viewModel
+        
+        if indexPath.section == 0 {
+            let header: FoodDetailsHeader = collectionView.dequeueCell(for: indexPath, headerFooter: true, kind: kind)
+            header.viewModel = viewModel
+            return header
+        }
+    
+        let header: FoodFeedHeaderCell = collectionView.dequeueCell(for: indexPath, headerFooter: true, kind: kind)
+        header.title = "Ingredients"
         return header
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return section == 0 ? 1 : 10
     }
     
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
 }
