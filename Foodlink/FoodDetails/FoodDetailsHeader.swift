@@ -9,10 +9,9 @@ import UIKit
 
 class FoodDetailsHeader: UICollectionReusableView, ReuseableCell {
     
-    var urlString: String? {
+    var viewModel: FoodDetailsViewModel? {
         didSet {
-            guard let urlString = urlString else { return }
-            mealImageView.loadImage(from: urlString)
+            mealImageView.loadImage(from: viewModel?.meal?.imageUrlString ?? "")
         }
     }
     

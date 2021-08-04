@@ -61,8 +61,7 @@ class FoodCategoryController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedMeal = snapshot.itemIdentifiers[indexPath.item]
-        let mealDetailsController = FoodDetailsController()
-        mealDetailsController.meal = selectedMeal
+        let mealDetailsController = FoodDetailsController(mealId: selectedMeal.id, mealName: selectedMeal.name)
         navigationController?.pushViewController(mealDetailsController, animated: true)
     }
     

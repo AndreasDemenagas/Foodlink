@@ -28,6 +28,7 @@
 		F58B809926B9F3F7005A85CD /* FoodDetailsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809826B9F3F7005A85CD /* FoodDetailsLayout.swift */; };
 		F58B809B26B9F56D005A85CD /* FoodDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809A26B9F56D005A85CD /* FoodDetailsHeader.swift */; };
 		F58B809D26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809C26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift */; };
+		F5C7227626BA9AF400918AD3 /* DetailedMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7227526BA9AF400918AD3 /* DetailedMeal.swift */; };
 		F5CB713826B6F6A20037C4ED /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB713726B6F6A20037C4ED /* ReusableView.swift */; };
 		F5E39D7326B6C17C002B3302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7226B6C17C002B3302 /* AppDelegate.swift */; };
 		F5E39D7526B6C17C002B3302 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7426B6C17C002B3302 /* SceneDelegate.swift */; };
@@ -62,6 +63,7 @@
 		F58B809826B9F3F7005A85CD /* FoodDetailsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsLayout.swift; sourceTree = "<group>"; };
 		F58B809A26B9F56D005A85CD /* FoodDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsHeader.swift; sourceTree = "<group>"; };
 		F58B809C26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsMealInfoCell.swift; sourceTree = "<group>"; };
+		F5C7227526BA9AF400918AD3 /* DetailedMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedMeal.swift; sourceTree = "<group>"; };
 		F5CB713726B6F6A20037C4ED /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		F5E39D6F26B6C17C002B3302 /* Foodlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E39D7226B6C17C002B3302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				F52E042726B8607C00D96258 /* Category.swift */,
 				F52E043426B86B1500D96258 /* Meal.swift */,
+				F5C7227526BA9AF400918AD3 /* DetailedMeal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				F5E39D8C26B6C1BF002B3302 /* MainTabBarController.swift in Sources */,
 				F52E042B26B8657700D96258 /* Data+.swift in Sources */,
 				F58B809926B9F3F7005A85CD /* FoodDetailsLayout.swift in Sources */,
+				F5C7227626BA9AF400918AD3 /* DetailedMeal.swift in Sources */,
 				F5E39D7D26B6C17C002B3302 /* Foodlink.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

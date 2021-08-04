@@ -9,7 +9,7 @@ import UIKit
 
 class FoodDetailsMealInfoCell: UICollectionViewCell, ReuseableCell {
     
-    var meal: Meal? {
+    var meal: DetailedMeal? {
         didSet {
             nameLabel.text = meal?.name
         }

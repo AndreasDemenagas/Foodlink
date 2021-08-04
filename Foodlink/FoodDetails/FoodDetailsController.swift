@@ -9,9 +9,21 @@ import UIKit
 
 class FoodDetailsController: UICollectionViewController {
     
-    init() {
+    let viewModel = FoodDetailsViewModel()
+    
+    init(mealId: String, mealName: String) {
         let layout = UICollectionViewCompositionalLayout.foodDetailsLayout()
+        self.mealId = mealId
         super.init(collectionViewLayout: layout)
+        
+        fetchMealDetails()
+        viewModel.mealName = mealName
+    }
+    
+    fileprivate func fetchMealDetails() {
+        viewModel.fetchMeal(with: mealId) {
+            self.collectionView.reloadData()
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -20,12 +32,12 @@ class FoodDetailsController: UICollectionViewController {
     
     static let foodDetailsHeaderId = "foodDetailsHeaderId"
     
-    var meal: Meal?
+    var mealId: String
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = meal?.name
+        title = viewModel.mealName
         navigationController?.navigationBar.prefersLargeTitles = false
         
         collectionView.backgroundColor = .backgroundWhite
@@ -35,13 +47,13 @@ class FoodDetailsController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: FoodDetailsMealInfoCell = collectionView.dequeueCell(for: indexPath)
-        cell.meal = meal
+        cell.meal = viewModel.meal
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header: FoodDetailsHeader = collectionView.dequeueCell(for: indexPath, headerFooter: true, kind: kind)
-        header.urlString = meal?.imageUrlString
+        header.viewModel = viewModel
         return header
     }
     

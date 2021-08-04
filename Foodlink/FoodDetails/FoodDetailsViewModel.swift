@@ -9,7 +9,9 @@ import Foundation
 
 class FoodDetailsViewModel {
     
-    var meal: Meal?
+    var meal: DetailedMeal?
+    
+    var mealName: String?
     
     func fetchMeal(with id: String, completion: @escaping () -> () ) {
         NetworkManager.shared.fetchMeal(with: id) { result in
