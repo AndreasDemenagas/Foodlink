@@ -54,6 +54,7 @@ class FoodCategoryController: UICollectionViewController {
         dataSource = UICollectionViewDiffableDataSource<Section, Meal>(collectionView: collectionView, cellProvider: { collectionView, indexPath, meal in
             let cell: FoodCategoryMealCell = collectionView.dequeueCell(for: indexPath)
             cell.meal = meal
+            
             return cell
         })
     }

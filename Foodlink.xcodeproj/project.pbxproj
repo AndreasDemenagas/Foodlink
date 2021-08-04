@@ -25,6 +25,9 @@
 		F58B809226B97F2D005A85CD /* FoodCategoryMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809126B97F2D005A85CD /* FoodCategoryMealCell.swift */; };
 		F58B809526B99655005A85CD /* FoodDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809426B99655005A85CD /* FoodDetailsController.swift */; };
 		F58B809726B99661005A85CD /* FoodDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809626B99661005A85CD /* FoodDetailsViewModel.swift */; };
+		F58B809926B9F3F7005A85CD /* FoodDetailsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809826B9F3F7005A85CD /* FoodDetailsLayout.swift */; };
+		F58B809B26B9F56D005A85CD /* FoodDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809A26B9F56D005A85CD /* FoodDetailsHeader.swift */; };
+		F58B809D26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809C26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift */; };
 		F5CB713826B6F6A20037C4ED /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB713726B6F6A20037C4ED /* ReusableView.swift */; };
 		F5E39D7326B6C17C002B3302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7226B6C17C002B3302 /* AppDelegate.swift */; };
 		F5E39D7526B6C17C002B3302 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E39D7426B6C17C002B3302 /* SceneDelegate.swift */; };
@@ -56,6 +59,9 @@
 		F58B809126B97F2D005A85CD /* FoodCategoryMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryMealCell.swift; sourceTree = "<group>"; };
 		F58B809426B99655005A85CD /* FoodDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsController.swift; sourceTree = "<group>"; };
 		F58B809626B99661005A85CD /* FoodDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewModel.swift; sourceTree = "<group>"; };
+		F58B809826B9F3F7005A85CD /* FoodDetailsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsLayout.swift; sourceTree = "<group>"; };
+		F58B809A26B9F56D005A85CD /* FoodDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsHeader.swift; sourceTree = "<group>"; };
+		F58B809C26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsMealInfoCell.swift; sourceTree = "<group>"; };
 		F5CB713726B6F6A20037C4ED /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		F5E39D6F26B6C17C002B3302 /* Foodlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E39D7226B6C17C002B3302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +131,9 @@
 			children = (
 				F58B809426B99655005A85CD /* FoodDetailsController.swift */,
 				F58B809626B99661005A85CD /* FoodDetailsViewModel.swift */,
+				F58B809826B9F3F7005A85CD /* FoodDetailsLayout.swift */,
+				F58B809A26B9F56D005A85CD /* FoodDetailsHeader.swift */,
+				F58B809C26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift */,
 			);
 			path = FoodDetails;
 			sourceTree = "<group>";
@@ -278,12 +287,14 @@
 				F52E042826B8607C00D96258 /* Category.swift in Sources */,
 				F58B809726B99661005A85CD /* FoodDetailsViewModel.swift in Sources */,
 				F58B808A26B9558B005A85CD /* FoodCategoryController.swift in Sources */,
+				F58B809D26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift in Sources */,
 				F52E043326B86A1000D96258 /* FoodShowcaseCell.swift in Sources */,
 				F58B808526B94F20005A85CD /* FoodFeedViewModel.swift in Sources */,
 				F58B808726B9543F005A85CD /* UICollectionView+.swift in Sources */,
 				F52E042F26B866FC00D96258 /* Extension_LayoutAnchors.swift in Sources */,
 				F52E043526B86B1500D96258 /* Meal.swift in Sources */,
 				F52E042D26B8658F00D96258 /* UIImage+Cache.swift in Sources */,
+				F58B809B26B9F56D005A85CD /* FoodDetailsHeader.swift in Sources */,
 				F58B808C26B95687005A85CD /* UIColor+.swift in Sources */,
 				F524358426B6CE480072A62A /* FoodFeedHeaderCell.swift in Sources */,
 				F58B809226B97F2D005A85CD /* FoodCategoryMealCell.swift in Sources */,
@@ -297,6 +308,7 @@
 				F5E39D7526B6C17C002B3302 /* SceneDelegate.swift in Sources */,
 				F5E39D8C26B6C1BF002B3302 /* MainTabBarController.swift in Sources */,
 				F52E042B26B8657700D96258 /* Data+.swift in Sources */,
+				F58B809926B9F3F7005A85CD /* FoodDetailsLayout.swift in Sources */,
 				F5E39D7D26B6C17C002B3302 /* Foodlink.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
