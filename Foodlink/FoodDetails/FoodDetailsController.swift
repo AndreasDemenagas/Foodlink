@@ -47,7 +47,7 @@ class FoodDetailsController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: FoodDetailsMealInfoCell = collectionView.dequeueCell(for: indexPath)
-        cell.meal = viewModel.meal
+        cell.viewModel = viewModel
         return cell
     }
     

@@ -31,6 +31,17 @@ struct DetailedMeal: Decodable, Hashable {
     func getTags() -> [String] {
         return self.tagsString?.components(separatedBy: ",") ?? []
     }
+    
+    func getTagsString() -> String {
+        var text = "Tags: "
+        
+        for tag in getTags() {
+            text.append("\(tag), ")
+        }
+        
+        
+        return String(String(text.dropLast()).dropLast())
+    }
 }
 
 struct DetailedMealResponse: Decodable {
