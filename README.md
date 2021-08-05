@@ -1,10 +1,15 @@
 ## Foodlink
 
-An iOS application for listing and viewing meal options. Supports searching, saving and looking through meals. 
+An iOS application for listing and viewing meal options. 
+
+#### Features: 
+* Viewing recipes, categories and meal instructions
+* Searching for recipes 
+* Saving recipes to quickly view later. 
 
 **Built with Xcode, Swift 5 and powered by TheMealDB API.**
 
-#### Features & Technologies: 
+#### Technologies used: 
 * UIKit 
 * CollectionView CompositionalLayout APIs
 * DiffableDataSource APIs
