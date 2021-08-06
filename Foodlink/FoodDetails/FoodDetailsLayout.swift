@@ -16,7 +16,7 @@ extension UICollectionViewCompositionalLayout {
                 item.contentInsets.trailing = 2
                 item.contentInsets.bottom = 12
                 
-                let group = NSCollectionLayoutGroup.vertical(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(200)), subitems: [item])
+                let group = NSCollectionLayoutGroup.vertical(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(170)), subitems: [item])
                 
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets.top = 4

@@ -17,6 +17,14 @@ struct DetailedMeal: Decodable, Hashable {
     let tagsString: String?
     let youtubeUrlString: String
     
+    let ing1: String?
+    let ing2: String?
+    let ing3: String?
+    let ing4: String?
+    let ing5: String?
+    let ing6: String?
+    let ing7: String?
+    
     enum CodingKeys: String, CodingKey {
         case id = "idMeal"
         case name = "strMeal"
@@ -26,6 +34,26 @@ struct DetailedMeal: Decodable, Hashable {
         case instructions = "strInstructions"
         case tagsString = "strTags"
         case youtubeUrlString = "strYoutube"
+        case ing1 = "strIngredient1"
+        case ing2 = "strIngredient2"
+        case ing3 = "strIngredient3"
+        case ing4 = "strIngredient4"
+        case ing5 = "strIngredient5"
+        case ing6 = "strIngredient6"
+        case ing7 = "strIngredient7"
+    }
+    
+    func getIngredients() -> [String] {
+        var ingredients = [String]()
+        ingredients.append(ing1 ?? "")
+        ingredients.append(ing2 ?? "")
+        ingredients.append(ing3 ?? "")
+        ingredients.append(ing4 ?? "")
+        ingredients.append(ing5 ?? "")
+        ingredients.append(ing6 ?? "")
+        ingredients.append(ing7 ?? "")
+        
+        return ingredients
     }
     
     func getTags() -> [String] {

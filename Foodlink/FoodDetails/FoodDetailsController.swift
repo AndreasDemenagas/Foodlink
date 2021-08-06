@@ -44,7 +44,7 @@ class FoodDetailsController: UICollectionViewController {
         
         collectionView.backgroundColor = .backgroundWhite
         collectionView.register(FoodDetailsMealInfoCell.self, forCellWithReuseIdentifier: FoodDetailsMealInfoCell.id)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "id")
+        collectionView.register(FoodDetailsIngredientCell.self, forCellWithReuseIdentifier: FoodDetailsIngredientCell.id)
         
         collectionView.register(FoodDetailsHeader.self, forSupplementaryViewOfKind: FoodDetailsController.foodDetailsHeaderId, withReuseIdentifier: FoodDetailsHeader.id)
         collectionView.register(FoodFeedHeaderCell.self, forSupplementaryViewOfKind: FoodDetailsController.ingredientsHeaderId, withReuseIdentifier: FoodFeedHeaderCell.id)
@@ -58,8 +58,8 @@ class FoodDetailsController: UICollectionViewController {
             return cell
         }
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "id", for: indexPath)
-        cell.backgroundColor = .red
+        let cell: FoodDetailsIngredientCell = collectionView.dequeueCell(for: indexPath)
+        cell.ingredientName = viewModel.meal?.getIngredients()[indexPath.item]
         return cell
     }
     
@@ -77,7 +77,11 @@ class FoodDetailsController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return section == 0 ? 1 : 10
+        if section == 0 {
+            return 1
+        }
+        
+        return viewModel.meal?.getIngredients().count ?? 0
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F524358426B6CE480072A62A /* FoodFeedHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F524358326B6CE480072A62A /* FoodFeedHeaderCell.swift */; };
+		F529BA2726BD6E020038E76B /* FoodDetailsIngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529BA2626BD6E020038E76B /* FoodDetailsIngredientCell.swift */; };
 		F52E042826B8607C00D96258 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042726B8607C00D96258 /* Category.swift */; };
 		F52E042B26B8657700D96258 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042A26B8657700D96258 /* Data+.swift */; };
 		F52E042D26B8658F00D96258 /* UIImage+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042C26B8658F00D96258 /* UIImage+Cache.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		F524358326B6CE480072A62A /* FoodFeedHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFeedHeaderCell.swift; sourceTree = "<group>"; };
+		F529BA2626BD6E020038E76B /* FoodDetailsIngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsIngredientCell.swift; sourceTree = "<group>"; };
 		F52E042726B8607C00D96258 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F52E042A26B8657700D96258 /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
 		F52E042C26B8658F00D96258 /* UIImage+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Cache.swift"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				F58B809A26B9F56D005A85CD /* FoodDetailsHeader.swift */,
 				F58B809C26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift */,
 				F5C7227726BAA52500918AD3 /* FoodDetailsInstructionsButton.swift */,
+				F529BA2626BD6E020038E76B /* FoodDetailsIngredientCell.swift */,
 			);
 			path = FoodDetails;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				F52E042826B8607C00D96258 /* Category.swift in Sources */,
 				F58B809726B99661005A85CD /* FoodDetailsViewModel.swift in Sources */,
 				F58B808A26B9558B005A85CD /* FoodCategoryController.swift in Sources */,
+				F529BA2726BD6E020038E76B /* FoodDetailsIngredientCell.swift in Sources */,
 				F58B809D26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift in Sources */,
 				F52E043326B86A1000D96258 /* FoodShowcaseCell.swift in Sources */,
 				F58B808526B94F20005A85CD /* FoodFeedViewModel.swift in Sources */,
