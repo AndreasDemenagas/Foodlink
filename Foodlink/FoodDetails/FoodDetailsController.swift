@@ -54,6 +54,7 @@ class FoodDetailsController: UICollectionViewController {
         
         if indexPath.section == 0 {
             let cell: FoodDetailsMealInfoCell = collectionView.dequeueCell(for: indexPath)
+            cell.delegate = self
             cell.viewModel = viewModel
             return cell
         }
@@ -87,4 +88,12 @@ class FoodDetailsController: UICollectionViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
+}
+
+extension FoodDetailsController: InstructionButtonDelegate {
+    
+    func didTapViewInstructions() {
+        
+    }
+    
 }

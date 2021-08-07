@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol InstructionButtonDelegate: AnyObject {
+    func didTapViewInstructions()
+}
+
 class FoodDetailsInstructionsButton: UIView {
     
     let imageView = UIImageView()
@@ -17,7 +21,11 @@ class FoodDetailsInstructionsButton: UIView {
         return label
     }()
     
-    init(imageName: String, title: String, backgroundColor: UIColor) {
+    var didTap: (() -> ())
+    
+    init(imageName: String, title: String, backgroundColor: UIColor, didTap: @escaping () -> ()) {
+        self.didTap = didTap
+        
         super.init(frame: .zero)
         
         self.backgroundColor = backgroundColor
@@ -32,6 +40,8 @@ class FoodDetailsInstructionsButton: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
         
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDidTap)))
+        
         let stack = UIStackView(arrangedSubviews: [imageView, titleLabel])
         stack.axis = .horizontal
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -40,6 +50,10 @@ class FoodDetailsInstructionsButton: UIView {
         addSubview(stack)
         stack.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         stack.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+    }
+    
+    @objc fileprivate func handleDidTap() {
+        self.didTap()
     }
     
     required init?(coder: NSCoder) {

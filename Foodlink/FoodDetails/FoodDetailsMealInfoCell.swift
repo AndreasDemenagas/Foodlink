@@ -55,7 +55,13 @@ class FoodDetailsMealInfoCell: UICollectionViewCell, ReuseableCell {
         return lbl
     }()
     
-    fileprivate let viewInstructionsButton = FoodDetailsInstructionsButton(imageName: "pencil", title: "View Instructions", backgroundColor: .systemBlue)
+    fileprivate lazy var viewInstructionsButton = FoodDetailsInstructionsButton(imageName: "pencil", title: "View Instructions", backgroundColor: .systemBlue, didTap: self.didTapInstructionsButton)
+    
+    weak var delegate: InstructionButtonDelegate?
+    
+    fileprivate func didTapInstructionsButton() {
+        self.delegate?.didTapViewInstructions()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
