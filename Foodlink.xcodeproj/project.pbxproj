@@ -29,6 +29,7 @@
 		F58B809B26B9F56D005A85CD /* FoodDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809A26B9F56D005A85CD /* FoodDetailsHeader.swift */; };
 		F58B809D26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B809C26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift */; };
 		F58D24FD26BAEFC400963008 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58D24FC26BAEFC400963008 /* NetworkManager.swift */; };
+		F5C1F93626BEC658009E826B /* InstructionsButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C1F93526BEC658009E826B /* InstructionsButtonDelegate.swift */; };
 		F5C7227626BA9AF400918AD3 /* DetailedMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7227526BA9AF400918AD3 /* DetailedMeal.swift */; };
 		F5C7227826BAA52500918AD3 /* FoodDetailsInstructionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7227726BAA52500918AD3 /* FoodDetailsInstructionsButton.swift */; };
 		F5CB713826B6F6A20037C4ED /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB713726B6F6A20037C4ED /* ReusableView.swift */; };
@@ -66,6 +67,7 @@
 		F58B809A26B9F56D005A85CD /* FoodDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsHeader.swift; sourceTree = "<group>"; };
 		F58B809C26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsMealInfoCell.swift; sourceTree = "<group>"; };
 		F58D24FC26BAEFC400963008 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F5C1F93526BEC658009E826B /* InstructionsButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsButtonDelegate.swift; sourceTree = "<group>"; };
 		F5C7227526BA9AF400918AD3 /* DetailedMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedMeal.swift; sourceTree = "<group>"; };
 		F5C7227726BAA52500918AD3 /* FoodDetailsInstructionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsInstructionsButton.swift; sourceTree = "<group>"; };
 		F5CB713726B6F6A20037C4ED /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				F5CB713726B6F6A20037C4ED /* ReusableView.swift */,
+				F5C1F93526BEC658009E826B /* InstructionsButtonDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				F52E042D26B8658F00D96258 /* UIImage+Cache.swift in Sources */,
 				F58B809B26B9F56D005A85CD /* FoodDetailsHeader.swift in Sources */,
 				F58D24FD26BAEFC400963008 /* NetworkManager.swift in Sources */,
+				F5C1F93626BEC658009E826B /* InstructionsButtonDelegate.swift in Sources */,
 				F58B808C26B95687005A85CD /* UIColor+.swift in Sources */,
 				F524358426B6CE480072A62A /* FoodFeedHeaderCell.swift in Sources */,
 				F58B809226B97F2D005A85CD /* FoodCategoryMealCell.swift in Sources */,

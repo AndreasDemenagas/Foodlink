@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol InstructionButtonDelegate: AnyObject {
-    func didTapViewInstructions()
-}
-
 class FoodDetailsInstructionsButton: UIView {
     
     let imageView = UIImageView()
