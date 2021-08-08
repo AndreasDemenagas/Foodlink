@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F524358426B6CE480072A62A /* FoodFeedHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F524358326B6CE480072A62A /* FoodFeedHeaderCell.swift */; };
+		F527C5B026C017DA00668A8F /* FoodDetailsInstructionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527C5AF26C017DA00668A8F /* FoodDetailsInstructionsController.swift */; };
 		F529BA2726BD6E020038E76B /* FoodDetailsIngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529BA2626BD6E020038E76B /* FoodDetailsIngredientCell.swift */; };
 		F52E042826B8607C00D96258 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042726B8607C00D96258 /* Category.swift */; };
 		F52E042B26B8657700D96258 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E042A26B8657700D96258 /* Data+.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		F524358326B6CE480072A62A /* FoodFeedHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFeedHeaderCell.swift; sourceTree = "<group>"; };
+		F527C5AF26C017DA00668A8F /* FoodDetailsInstructionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsInstructionsController.swift; sourceTree = "<group>"; };
 		F529BA2626BD6E020038E76B /* FoodDetailsIngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsIngredientCell.swift; sourceTree = "<group>"; };
 		F52E042726B8607C00D96258 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F52E042A26B8657700D96258 /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				F58B809C26B9FB84005A85CD /* FoodDetailsMealInfoCell.swift */,
 				F5C7227726BAA52500918AD3 /* FoodDetailsInstructionsButton.swift */,
 				F529BA2626BD6E020038E76B /* FoodDetailsIngredientCell.swift */,
+				F527C5AF26C017DA00668A8F /* FoodDetailsInstructionsController.swift */,
 			);
 			path = FoodDetails;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				F58B808C26B95687005A85CD /* UIColor+.swift in Sources */,
 				F524358426B6CE480072A62A /* FoodFeedHeaderCell.swift in Sources */,
 				F58B809226B97F2D005A85CD /* FoodCategoryMealCell.swift in Sources */,
+				F527C5B026C017DA00668A8F /* FoodDetailsInstructionsController.swift in Sources */,
 				F58B808E26B95B8D005A85CD /* FoodCategoryViewModel.swift in Sources */,
 				F52E043126B8672300D96258 /* FoodCategoryCell.swift in Sources */,
 				F5E39D7326B6C17C002B3302 /* AppDelegate.swift in Sources */,

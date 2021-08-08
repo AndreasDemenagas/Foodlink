@@ -70,6 +70,10 @@ struct DetailedMeal: Decodable, Hashable {
         
         return String(String(text.dropLast()).dropLast())
     }
+    
+    func getInstructionsText() -> String {
+        return instructions.replacingOccurrences(of: "\n", with: "\n\n")
+    }
 }
 
 struct DetailedMealResponse: Decodable {
