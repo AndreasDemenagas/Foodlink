@@ -93,8 +93,7 @@ class FoodDetailsController: UICollectionViewController {
 extension FoodDetailsController: InstructionButtonDelegate {
     
     func didTapViewInstructions() {
-        let instructionsController = FoodDetailsIntructionsController()
-        instructionsController.meal = viewModel.meal
+        let instructionsController = FoodDetailsIntructionsController(meal: viewModel.meal)
         
         navigationController?.pushViewController(instructionsController, animated: true)
     }

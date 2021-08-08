@@ -7,42 +7,19 @@
 
 import UIKit
 
-class FoodDetailsInstructionTextCell: UITableViewCell, ReuseableCell {
+class FoodDetailsIntructionsController: UITableViewController {
     
-    var meal: DetailedMeal? {
-        didSet {
-            instructionsTextView.text = meal?.getInstructionsText()
-            instructionsTextView.setContentOffset(.zero, animated: true)
-        }
-    }
+    var meal: DetailedMeal?
     
-    fileprivate let instructionsTextView: UITextView = {
-        let tv = UITextView()
-        tv.font = UIFontMetrics.default.scaledFont(for: .systemFont(ofSize: 18))
-        tv.translatesAutoresizingMaskIntoConstraints = false
-        return tv
-    }()
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    init(meal: DetailedMeal?) {
+        self.meal = meal
         
-        setupCell()
+        super.init(style: .plain)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    fileprivate func setupCell() {
-        addSubview(instructionsTextView)
-        
-        instructionsTextView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 24, left: 16, bottom: 24, right: 16))
-    }
-}
-
-class FoodDetailsIntructionsController: UITableViewController {
-    
-    var meal: DetailedMeal? 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +31,28 @@ class FoodDetailsIntructionsController: UITableViewController {
     }
     
     fileprivate func setupTableView() {
+        tableView.register(FoodDetailsInstructionTextCell.self, forCellReuseIdentifier: FoodDetailsInstructionTextCell.id)
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: FoodDetailsInstructionTextCell.id, for: indexPath) as! FoodDetailsInstructionTextCell
+        cell.meal = meal
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let text = meal?.getInstructionsText() else {
+            return 10
+        }
         
+        let rect = NSString(string: text).boundingRect(with: CGSize(width: view.frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)], context: nil)
+        let imageViewHeight = view.frame.width * 0.56
+        let cellHeight = imageViewHeight + 40 + 20 + 20 + rect.height + 20
+        return cellHeight
     }
     
 }
