@@ -18,3 +18,13 @@ An iOS application for listing and viewing meal options.
 * Caching Images 
 * Programmatic UI
 
+#### Sample Screens 
+
+<p align="center">
+    <img src="Screens/foodlink-1.png" width=276 />
+    <img src="Screens/foodlink-2.png" width=276 />
+    <br>
+    <img src="Screens/foodlink-3.png" width=276 />
+    <img src="Screens/foodlink-4.png" width=276 />
+</p>
+
